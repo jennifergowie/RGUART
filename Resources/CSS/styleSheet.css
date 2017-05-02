@@ -1,0 +1,198 @@
+/* NB: add comments throughout! */
+
+body {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.newUserbg{
+    background-image: url("../Images/NewUserImage.jpg");
+
+    /* Full height */
+    height: 1000px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg {
+    /* The image used */
+    background-image: url("../Images/RguPaintImage-1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logOutBg{
+    /* The image used */
+    background-image: url("../Images/logoutImage.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main
+{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.inputButton {
+    background-color: lightblue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    max-width: 150px;
+}
+
+
+.centered {
+    margin:auto;
+    display:block;
+}
+
+.logo {
+    width:100px;
+    height:100px;
+}
+
+img.navBarIcon
+{
+    height: 50px;
+    width: 50px;
+}
+
+input[type=username], input[type=tel],input[type=surname], input[type=email], input[type=password], input[type=course] {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 6px 0;
+    max-width: 400px;
+
+}
+
+footer p {
+    text-align:center;
+}
+
+.container {
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 45px;
+}
+
+h2 {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+h3 {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+h4 {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+table {
+    border-collapse: separate;
+}
+
+table, td, th {
+    border: 1px solid white;
+    text-align: center;
+    border-spacing: 5px;
+}
+
+.inputform {
+    float: left;
+    max-width: 400px;
+}
+
+/* Navbar formatting start */
+nav>ul {
+    list-style-type: none;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+nav>ul>li {
+    float: left;
+    font-family: "Quicksand", sans-serif;
+    font-size: small;
+    color: black;
+}
+
+div{
+    font-family: "Quicksand", sans-serif;
+    font-size: small;
+    color: black;
+
+}
+span{
+    font-family: "Quicksand", sans-serif;
+    font-size: medium;
+    color: black;
+}
+
+nav>ul>li a {
+    color: black;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    color: purple;
+}
+
+p{
+    font-family: "Quicksand", sans-serif;
+    font-size: medium;
+}
+
+.grid-container
+
+{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
