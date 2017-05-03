@@ -1,7 +1,7 @@
 <?php
 
 session_start(); // Start Session
-
+include("../AdminFiles/dbConnect.php");    //Establish database connection
 $username=$_POST["username"]; //Get username that has been entered
 $studentName=$_POST["studentName"];
 $emailAddress=$_POST["email"]; //Get email address that has been entered
