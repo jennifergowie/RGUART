@@ -15,10 +15,6 @@ $link->query($sql);
 $sql_two = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')";
 $link->query($sql_two);
 
-$sql_three = "INSERT INTO profilepicture (userName) VALUES ('".$username."')";
-$link->query($sql_three);
-
-
 echo $username;
 echo $emailAddress;
 echo $password;
