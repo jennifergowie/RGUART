@@ -26,8 +26,8 @@ $sql = "INSERT INTO users (UserName, EmailAddress, Password, MobileNumber) VALUE
 $link->query($sql);
 
 
-$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) VALUES ('".$username."','".$studentName."','".$emailAddress."','".$password."','".$mobileNumber."', '".$course."','".$year."')";
-$link->query($sql);
+//$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) VALUES ('".$username."','".$studentName."','".$emailAddress."','".$password."','".$mobileNumber."', '".$course."','".$year."')";
+//$link->query($sql);
 
 echo $username;
 echo $studentName;
