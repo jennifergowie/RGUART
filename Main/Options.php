@@ -18,7 +18,7 @@
 
         <nav style="margin-top: 5px">
         <ul>
-            <li><a href="Account.php" class="centered"><img height="50" width="50" class="navBarIcon centered" src="../Resources/Images/clematis.png" alt="AccountIcon;">Your Account</a></li>
+            <li><a href="UserProfileAdmin.php" class="centered"><img height="50" width="50" class="navBarIcon centered" src="../Resources/Images/clematis.png" alt="AccountIcon;">Your Account</a></li>
             <li><a href="../SearchandDisplayUsers/SearchForUser.php" class="centered"><img height="50" width="50" class="navBarIcon centered" src="../Resources/Images/clematis.png" alt="HomeIcon;">View Other Profiles</a></li>
             <li><a href="../Logout/Logout.php" class="centered"><img height="50" width="50" class="navBarIcon centered" src="../Resources/Images/clematis.png" alt="LogoutIcon">Logout</a></li
         </ul>
