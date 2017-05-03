@@ -10,8 +10,17 @@ $mobileNumber=$_POST["tel"]; //Get mobile number that has been entered
 $course =$_POST["course"];
 $year=$_POST["year"];
 
+
+echo $username;
+echo $studentName;
+echo $emailAddress;
+echo $password;
+echo $mobileNumber;
+echo $course;
+echo $year;
+
 include("../AdminFiles/dbConnect.php");    //Establish database connection
-$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year)VALUES ('".$username."','".$studentName."','".$emailAddress."','".$password."','".$mobileNumber."', '".$course."','".$year."')";
+$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) VALUES ('".$username."','".$studentName."','".$emailAddress."','".$password."','".$mobileNumber."', '".$course."','".$year."')";
 $link->query($sql);
 
 echo $username;
@@ -22,4 +31,4 @@ echo $mobileNumber;
 echo $course;
 echo $year;
 
-header("location: RegisterSuccess.php");
+//header("location: RegisterSuccess.php");
