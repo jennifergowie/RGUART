@@ -13,7 +13,8 @@ $course =$_POST["course"];
 $year=$_POST["year"];
 
 include("../AdminFiles/dbConnect.php");    //Establish database connection
-$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) VALUES ('".$username."','".$studentName."',".$emailAddress."','".$password."', '".$mobileNumber."', '".$course.", '".$year."'')";
+$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) 
+VALUES ('".$username."','".$studentName."','".$emailAddress."','".$password."','".$mobileNumber."', '".$course."','".$year."')";
 $link->query($sql);
 
 echo $username;
