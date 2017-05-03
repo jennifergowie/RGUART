@@ -79,7 +79,7 @@ img.navBarIcon
     width: 50px;
 }
 
-input[type=username], input[type=tel],input[type=surname], input[type=email], input[type=password], input[type=course] {
+input[type=username], input[type=tel],input[type=surname], input[type=email],input[type=StudentName],input[type=Year], input[type=password], input[type=course] {
     border: 2px solid lightblue;
     border-radius: 5px;
     width: 100%;

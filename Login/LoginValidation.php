@@ -12,7 +12,7 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
     $username=$_POST["username"]; //Get username that has been entered
     $password=$_POST["password"]; //Get password that has been entered
 
-    $sqlPassword = "SELECT Password FROM users WHERE UserName = '".$username."'";
+    $sqlPassword = "SELECT Password FROM userprofiles WHERE UserName = '".$username."'";
     $userPasswordArray = $link->query($sqlPassword);
     $userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
 
