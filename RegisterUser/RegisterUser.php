@@ -2,7 +2,7 @@
 
 session_start(); // Start Session
 
-include("../AdminFiles/dbConnect.php");    //Establish database connection
+
 
 $username=$_POST["username"]; //Get username that has been entered
 $studentName=$_POST["studentname"];
@@ -12,7 +12,8 @@ $mobileNumber=$_POST["tel"]; //Get mobile number that has been entered
 $course =$_POST["course"];
 $year=$_POST["year"];
 
-$sql = "INSERT INTO userprofiles (UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) VALUES ('".$username."','".$studentName."',".$emailAddress."','".$password."', '".$mobileNumber."', '".$course.", '".$year."'')";
+include("../AdminFiles/dbConnect.php");    //Establish database connection
+$sql = "INSERT INTO userprofiles(UserName, StudentName, EmailAddress, Password, MobileNumber, Course, Year) VALUES ('".$username."','".$studentName."',".$emailAddress."','".$password."', '".$mobileNumber."', '".$course.", '".$year."'')";
 $link->query($sql);
 
 echo $username;
