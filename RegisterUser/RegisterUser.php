@@ -1,26 +1,19 @@
 <?php
 
 session_start(); // Start Session
-include("../AdminFiles/dbConnect.php");    //Establish database connection
-$username=$_POST["username"]; //Get userna
-//me that has been entered
-$studentName=$_POST["studentName"];
+
+include("../AdminFiles/dbConnect.php");
+
+
+$username=$_POST["username"]; //Get username that has been entered
+//$studentName=$_POST["studentName"];
 $emailAddress=$_POST["email"]; //Get email address that has been entered
 $password=$_POST["password"]; //Get password that has been entered
 $mobileNumber=$_POST["tel"]; //Get mobile number that has been entered
-$course =$_POST["course"];
+//$course =$_POST["course"];
 $year=$_POST["year"];
 
 
-echo $username;
-echo $studentName;
-echo $emailAddress;
-echo $password;
-echo $mobileNumber;
-echo $course;
-echo $year;
-
-include("../AdminFiles/dbConnect.php");    //Establish database connection
 
 $sql = "INSERT INTO users (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')";
 $link->query($sql);
@@ -30,11 +23,11 @@ $link->query($sql);
 //$link->query($sql);
 
 echo $username;
-echo $studentName;
+//echo $studentName;
 echo $emailAddress;
 echo $password;
 echo $mobileNumber;
-echo $course;
-echo $year;
+//echo $course;
+//echo $year;
 
-//header("location: RegisterSuccess.php");
+header("location: RegisterSuccess.php");
