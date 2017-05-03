@@ -5,7 +5,7 @@ session_start(); // Start Session
 
 
 $username=$_POST["username"]; //Get username that has been entered
-$studentName=$_POST["studentname"];
+$studentName=$_POST["studentName"];
 $emailAddress=$_POST["email"]; //Get email address that has been entered
 $password=$_POST["password"]; //Get password that has been entered
 $mobileNumber=$_POST["tel"]; //Get mobile number that has been entered
