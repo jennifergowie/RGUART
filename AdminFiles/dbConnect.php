@@ -1,7 +1,7 @@
 <?php
 /*Connection string information*/
 $connectstr_dbhost = '';
-$connectstr_dbname = 'ART';
+$connectstr_dbname = 'rguart';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
