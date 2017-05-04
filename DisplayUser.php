@@ -24,7 +24,7 @@
             $result = $link->query($sqlUserDetails);
 
             $displayName = $sqlUserDetails[UserName];
-            echo displayName;
+            echo $displayName;
             ?>
 
     <nav style="margin-top: 5px">
