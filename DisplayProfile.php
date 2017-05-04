@@ -44,9 +44,10 @@ $count = 0;
         while ($count < $size-1)
             {
                 $rowtoDisplay = $row = mssql_fetch_row($count);
-                echo '<img height="300 width="300" src="data:image;base64,'.$rowtoDisplay['content'].' ">';
-                $count = $count+1;
+                echo '<img src="data:image/jpeg;base64,'.base64_encode( $rowtoDisplay['content']).'" width="100" height="100"/>';
                 echo '<br />';
+                $count = $count+1;
+
             }
     }
 
