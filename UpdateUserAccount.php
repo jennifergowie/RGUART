@@ -18,7 +18,7 @@ EmailAddress = '".$emailAddress."',
 Password = '".$password."', 
 MobileNumber = '".$mobileNumber."'
 WHERE UserName = '".$_SESSION["username"]."'";
-;
+
 
 $link->query($sql);
 
@@ -34,7 +34,7 @@ WHERE UserName = '".$_SESSION["username"]."'";
 
 $link->query($sql);
 
-$link->close(); //Close  database link
+//$link->close(); //Close  database link
 
 echo $username;
 echo $emailAddress;
