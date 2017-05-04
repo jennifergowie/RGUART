@@ -1,4 +1,63 @@
-<?php include("SessionCheck.php");?>
+<?php
+
+session_start(); // Start Session
+
+include("SessionCheck.php");
+include("dbConnect.php");    //Establish database connection
+
+$username=$_SESSION["username"]; //Get username that has been entered
+
+$sqlPassword = "SELECT Password FROM userprofiles WHERE UserName = '".$username."'";
+$userPasswordArray = $link->query($sqlPassword);
+$userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
+
+$studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
+$studentNameinfo = $link->query($studentNameQuery);
+$studentName =getSingleValueFromDatabaseArray($studentNameinfo);
+
+$emailAddressQuery = "SELECT EmailAddress FROM userprofiles WHERE UserName = '".$username."'";
+$emailAddressInfo = $link->query($emailAddressQuery);
+$emailAddress = getSingleValueFromDatabaseArray($emailAddressInfo);
+
+$sqlMobileNumberQuery = "SELECT MobileNumber FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$mobileNumberInfo = $link->query($sqlMobileNumberQuery);
+$mobileNumber =getSingleValueFromDatabaseArray($mobileNumberInfo);
+
+$sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$courseInfo = $link->query($sqlCourseQuery);
+$course =getSingleValueFromDatabaseArray($courseInfo);
+
+$sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+$yearInfo = $link->query($sqlYearQuery);
+$year =getSingleValueFromDatabaseArray($yearInfo);
+
+$_SESSION["username"] = $username;
+$_SESSION["password"] = $userPassword;
+$_SESSION["studentName"] = $studentName;
+$_SESSION["emailAddress"] = $emailAddress;
+$_SESSION["mobileNumber"] = $mobileNumber;
+$_SESSION["course"] = $course;
+$_SESSION["year"] = $year;
+
+
+$link->close();
+
+function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
+{
+
+    foreach ($dbArray as $key => $val)
+    {
+        foreach ($val as $value)
+        {
+            $output= $value;
+        }
+    }
+
+    return $output;
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,5 +83,11 @@
             <span>Mobile Number: </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
             <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
+
+        <nav style="margin-top: 5px">
+            <ul>
+                <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
+                src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
+            </ul>
 </header>
 

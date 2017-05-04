@@ -19,24 +19,23 @@
 
             <nav style="margin-top: 5px">
                 <ul>
-                    <li><a href="loadprofile.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                          src="Resources/Images/clematis.png" alt="LogoutIcon">View Public Profile</a></li>
-
+                    <li><a href="DisplayProfile.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
+                    src="Resources/Images/clematis.png" alt="LogoutIcon">Display Profile</a></li>
 
                     <li><a href="UpdateAccount.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                          src="Resources/Images/clematis.png" alt="LogoutIcon">Update Profile</a></li>
+                    src="Resources/Images/clematis.png" alt="LogoutIcon">Update Profile</a></li>
 
                     <li><a href="fileupload.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                       src="Resources/Images/clematis.png" alt="LogoutIcon">Change Profile Picture</a></li>
+                    src="Resources/Images/clematis.png" alt="LogoutIcon">Change Profile Picture</a></li>
 
                     <li><a href="UploadUserArtImages.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                                           src="Resources/Images/clematis.png" alt="LogoutIcon">Upload Image</a></li>
+                    src="Resources/Images/clematis.png" alt="LogoutIcon">Upload Image</a></li>
 
                     <li><a href="DeleteUser.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                       src="Resources/Images/clematis.png" alt="LogoutIcon">Delete Profile</a></li>
+                    src="Resources/Images/clematis.png" alt="LogoutIcon">Delete Profile</a></li>
 
                     <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                    src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
+                    src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
                 </ul>
 
                 <?php
