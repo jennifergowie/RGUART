@@ -12,11 +12,11 @@ $studentName = $_POST["studentName"];
 $course = $_POST["course"];
 $year = $_POST["year"];
 
-$sql = "INSERT INTO users (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')WHERE UserName = $username";
+$sql = "UPDATE users SET UserName='".$username."',EmailAddress='".$emailAddress."',Password='".$password."',MobileNumber='".$mobileNumber."' WHERE UserName = $username";
 $link->query($sql);
 
-$sql_two = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')WHERE UserName = $username";
-$link->query($sql_two);
+//$sql_two = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')WHERE UserName = $username";
+//$link->query($sql_two);
 
 //$sql_three = "INSERT INTO profilepictures (userName) VALUES ('".$username."')";
 //$link->query($sql_three);
