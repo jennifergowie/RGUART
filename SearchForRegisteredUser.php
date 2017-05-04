@@ -28,6 +28,7 @@ include("dbConnect.php");
     $year =getSingleValueFromDatabaseArray($yearInfo);
 
     $_SESSION["searchedStudentsName"] = $studentName;
+    echo $studentName;
     $_SESSION["searchedStudentsCourse"] = $course;
     $_SESSION["searchedStudentYear"]= $year;
 
