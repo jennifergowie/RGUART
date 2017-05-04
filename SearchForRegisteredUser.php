@@ -32,7 +32,7 @@ include("dbConnect.php");
     $_SESSION["searchedStudentsCourse"] = $course;
     $_SESSION["searchedStudentYear"]= $year;
 
-header("Location: DisplaySearchInfo.php");
+//header("Location: DisplaySearchInfo.php");
 
 
 function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
