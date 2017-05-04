@@ -11,18 +11,14 @@ include("dbConnect.php");
     $courseInfo = $link->query($sqlCourseQuery);
     $course =getSingleValueFromDatabaseArray($courseInfo);
 
-    //$ProfileImageSQLQuery = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
-    //$ProfilePictureToDisplay = $link->query($ProfileImageSQLQuery);
+    $sqlProfilePictureQuery="SELECT content FROM profilepictures WHERE UserName = '".$username."'";
+    $profilepicture = $link->query($sqlProfilePictureQuery);
 
-    //$fileName=$ProfilePictureToDisplay['name'];
-    //$fileType=$ProfilePictureToDisplay['type'];
-    //$fileSize=$ProfilePictureToDisplay['size'];
-    //$fileContent=$ProfilePictureToDisplay['content'];
+        $profilepic = $profilepicture[0];
+        //{
+          //  header("Content-type: image/jpeg");
 
-
-    //$ImagesSQLQuery = "SELECT * FROM userimages WHERE UserName = '".$username."'";
-    //$ImagePicturesToDisplay = $link->query($ImagesSQLQuery);
-
+    //             echo "$row[0]";
     $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $yearInfo = $link->query($sqlYearQuery);
     $year =getSingleValueFromDatabaseArray($yearInfo);
@@ -30,9 +26,10 @@ include("dbConnect.php");
     $_SESSION["searchedStudentsName"] = $studentName;
     $_SESSION["searchedStudentsCourse"] = $course;
     $_SESSION["searchedStudentYear"]= $year;
+    $_SESSION["profilepicture"]= $profilepic;
 
     function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
-{
+    {
 
     foreach ($dbArray as $key => $val)
     {
@@ -63,6 +60,7 @@ include("dbConnect.php");
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
+        <?php echo "<b>{$_SESSION["profilepicture"]}</b>"?><br>
 
 </header>
 <nav style="margin-top: 5px">

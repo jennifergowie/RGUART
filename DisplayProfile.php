@@ -31,6 +31,11 @@ $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"
 $yearInfo = $link->query($sqlYearQuery);
 $year =getSingleValueFromDatabaseArray($yearInfo);
 
+$sqlProfilePictureQuery="SELECT content FROM profilepictures WHERE UserName = '".$username."'";
+$profilepicture = $link->query($sqlProfilePictureQuery);
+$profilepic = $profilepicture[0];
+
+
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
 $_SESSION["studentName"] = $studentName;
@@ -38,7 +43,7 @@ $_SESSION["emailAddress"] = $emailAddress;
 $_SESSION["mobileNumber"] = $mobileNumber;
 $_SESSION["course"] = $course;
 $_SESSION["year"] = $year;
-
+$_SESSION["profilepicture"]= $profilepic;
 
 $link->close();
 
@@ -83,7 +88,7 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <span>Mobile Number: </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
             <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
-
+            <?php echo "<b>{$_SESSION["profilepicture"]}</b>"?><br>
         <nav style="margin-top: 5px">
             <ul>
                 <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
