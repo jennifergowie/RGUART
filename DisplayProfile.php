@@ -94,19 +94,15 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
         <?php
             $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
             $imagesResults = $link->query($sql);
-            $size = sizeof($imagesResults);
-            $loopSize = $size -1;
-            $count = 0;
-            //while($row = mysqli_fetch_array($imageResults))
-            //{
+
             foreach( $imagesResults as $value ) {
-                //$rowtoDisplay = $imagesResults = mssql_fetch_row[$count];
+                echo "<b>this is entering the loop</b>";
                 echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
                 echo '<br />';
             }
 
-            //}
-        
+
+
         ?>
 
             <nav style="margin-top: 5px">
