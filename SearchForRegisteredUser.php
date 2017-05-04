@@ -53,7 +53,11 @@ include("dbConnect.php");
         <br/>
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/></center>
         <br/>
-
+        <?php
+        if ($profilePicturesResults = true) {
+            echo '<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>';
+        }
+        ?><br/>
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
@@ -63,18 +67,18 @@ include("dbConnect.php");
         $imagesResults = $link->query($sql);
         if ($imagesResults = true){
         foreach( $imagesResults as $value ) {
-         echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-         echo '<br />';
+            echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+            echo '<br />';
         }
         }
         ?>
 
-</header>
-<nav style="margin-top: 5px">
-    <ul>
-        <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-        src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
-    </ul>
+        </header>
+        <nav style="margin-top: 5px">
+        <ul>
+            <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
+            src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
+        </ul>
 
 
 
