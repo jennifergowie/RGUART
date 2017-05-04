@@ -92,6 +92,7 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
 
         <?php
+        include "dbConnect.php";
             $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
             $imagesResults = $link->query($sql);
 
