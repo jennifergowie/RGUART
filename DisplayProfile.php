@@ -33,7 +33,18 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
 
 $sql = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
 $sth = $link->query($sql);
-$result=mysqli_fetch_array($sth);
+$result = mysqli_fetch_array($sth);
+
+$sql = "SELECT content FROM userimages WHERE UserName = '".$username."'";
+$imagesResults = $link->query($sql);
+$size = sizeof($imagesResults);
+$count = 0;
+    while($row = mysqli_fetch_array($result))
+        while ($count < $size-1)
+            {
+                echo '<img height="300 width="300" src="data:image;base64,'.$row[$count].' ">';
+                echo '<br />';
+            }
 
 
 $_SESSION["username"] = $username;
@@ -43,7 +54,7 @@ $_SESSION["emailAddress"] = $emailAddress;
 $_SESSION["mobileNumber"] = $mobileNumber;
 $_SESSION["course"] = $course;
 $_SESSION["year"] = $year;
-echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
+
 
 $link->close();
 
@@ -80,6 +91,9 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/></center>
             <br/>
 
+            <?php
+            echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
+            ?>
 
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
             <span>Password: </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
@@ -88,10 +102,8 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <span>Mobile Number: </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
             <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
-        <?php
-        echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
-        ?>
-        <nav style="margin-top: 5px">
+
+            <nav style="margin-top: 5px">
             <ul>
                 <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
                 src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
