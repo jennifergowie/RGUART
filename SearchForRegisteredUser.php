@@ -3,30 +3,25 @@
 $username = $_POST["username"];
 
 include("dbConnect.php");
-    $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
+    $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$studentName."'";
     $studentNameinfo = $link->query($studentNameQuery);
     $studentName = getSingleValueFromDatabaseArray($studentNameinfo);
 
-    $sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$username."'";
+    $sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$studentName."'";
     $courseInfo = $link->query($sqlCourseQuery);
     $course =getSingleValueFromDatabaseArray($courseInfo);
 
-    $sqlProfilePictureQuery="SELECT content FROM profilepictures WHERE UserName = '".$username."'";
-    $profilepicture = $link->query($sqlProfilePictureQuery);
+    $sqlProfilePicQuery = "SELECT * FROM profilepictures WHERE UserName = '".$studentName."'";
+    $profilePicturesResults = $link->query($sqlProfilePicQuery);
 
-        $profilepic = $profilepicture[0];
-        //{
-          //  header("Content-type: image/jpeg");
-
-    //             echo "$row[0]";
-    $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
+    $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$studentName."'"; //Setup SQL query to get CustomerID from username
     $yearInfo = $link->query($sqlYearQuery);
     $year =getSingleValueFromDatabaseArray($yearInfo);
 
     $_SESSION["searchedStudentsName"] = $studentName;
     $_SESSION["searchedStudentsCourse"] = $course;
     $_SESSION["searchedStudentYear"]= $year;
-    $_SESSION["profilepicture"]= $profilepic;
+
 
     function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
     {
@@ -57,10 +52,23 @@ include("dbConnect.php");
         <br/>
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/></center>
         <br/>
+        <?php
+        echo '<img src="data:image/jpeg;base64,'.base64_encode( $profilePicturesResults['content'] ).'" width="100" height="100"/>';
+        ?><br/>
+
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
-        <?php echo "<b>{$_SESSION["profilepicture"]}</b>"?><br>
+        <?php
+        include "dbConnect.php";
+        $sql = "SELECT * FROM userimages WHERE UserName = '".$studentName."'";
+        $imagesResults = $link->query($sql);
+
+        foreach( $imagesResults as $value ) {
+            echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+            echo '<br />';
+        }
+        ?>
 
 </header>
 <nav style="margin-top: 5px">

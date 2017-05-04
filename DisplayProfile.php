@@ -32,8 +32,8 @@ $yearInfo = $link->query($sqlYearQuery);
 $year =getSingleValueFromDatabaseArray($yearInfo);
 
 $sql = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
-$sth = $link->query($sql);
-$result = mysqli_fetch_array($sth);
+$profilePicturesResults = $link->query($sql);
+
 
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
@@ -80,7 +80,7 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <br/>
 
             <?php
-            echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
+            echo '<img src="data:image/jpeg;base64,'.base64_encode( $profilePicturesResults['content'] ).'" width="100" height="100"/>';
             ?><br/>
 
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
@@ -91,20 +91,16 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
 
-        <?php
-        include "dbConnect.php";
-            $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
-            $imagesResults = $link->query($sql);
+            <?php
+                include "dbConnect.php";
+                $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
+                $imagesResults = $link->query($sql);
 
-            foreach( $imagesResults as $value ) {
-                echo "<b>this is entering the loop</b>";
-                echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-                echo '<br />';
-            }
-
-
-
-        ?>
+                    foreach( $imagesResults as $value ) {
+                        echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+                        echo '<br />';
+                    }
+            ?>
 
             <nav style="margin-top: 5px">
             <ul>
