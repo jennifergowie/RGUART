@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<form action="LoginValidation.php" method="post">
+
     <main>
         <div class="bg">
             <br/>
@@ -15,7 +15,7 @@
             <br/>
 
             <h2>Welcome to RGU Artist</h2>
-
+            <form action="LoginValidation.php" method="post">
             <input type="username" name="username" placeholder="User Name" onfocus="this.placeholder=''" onblur="this.placeholder='Matriculation Number'" required><br>
             <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required><br>
             <button class="inputButton" type="submit">Login</button><br/>
@@ -29,7 +29,7 @@
 
 
         <?php
-        include("../Resources/HeaderandFooterSections/RGUArtistFooterSection.php");
+        include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");
         ?>
 
 </main>
