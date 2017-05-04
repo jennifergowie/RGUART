@@ -31,10 +31,10 @@ $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"
 $yearInfo = $link->query($sqlYearQuery);
 $year =getSingleValueFromDatabaseArray($yearInfo);
 
-//$sqlProfilePictureQuery="SELECT content FROM profilepictures WHERE UserName = '".$username."'";
-//$profilepicture = $link->query($sqlProfilePictureQuery);
-//$profilepic = $profilepicture[0];
-
+$sql = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
+$sth = $link->query($sql);
+$result=mysqli_fetch_array($sth);
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'"/>';
 
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
@@ -43,7 +43,7 @@ $_SESSION["emailAddress"] = $emailAddress;
 $_SESSION["mobileNumber"] = $mobileNumber;
 $_SESSION["course"] = $course;
 $_SESSION["year"] = $year;
-//$_SESSION["profilepicture"]= $profilepic;
+
 
 $link->close();
 
