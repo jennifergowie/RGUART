@@ -24,9 +24,5 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
         "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')";
 
     $result = $link->query($sql);
-
-    echo "<br>File $fileName uploaded<br>";
-
 }
-
-?>
+header("location: ImageUploadedSuccess.php");
