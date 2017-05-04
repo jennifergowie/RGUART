@@ -39,7 +39,7 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
     //$_SESSION["mobileNumber"]=$mobileNumber;
     //$_SESSION["course"]=$course;
     //$_SESSION["year"]=$year;
-    header("location: DisplayProfile.php");
+   // header("location: DisplayProfile.php");
     //exit();
 //}
 
