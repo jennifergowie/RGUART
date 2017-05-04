@@ -33,13 +33,14 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
 
 //if(checkPassword($password,$userPassword)){
     echo $username;
-    echo $password;
-    echo $studentName;
-    echo $emailAddress;
-    echo $mobileNumber;
-    echo $course;
-    echo $year;
-   // header("location: DisplayProfile.php");
+    $_SESSION["username"] = $username;
+    $_SESSION["password"] = $password;
+    //echo $studentName;
+    //echo $emailAddress;
+    //echo $mobileNumber;
+    //echo $course;
+    //echo $year;
+    header("location: DisplayProfile.php");
     //exit();
 //}
 
