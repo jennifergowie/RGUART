@@ -32,13 +32,13 @@ $yearInfo = $link->query($sqlYearQuery);
 $year =getSingleValueFromDatabaseArray($yearInfo);
 
 //if(checkPassword($password,$userPassword)){
-    $_SESSION["username"]=$username;
-    $_SESSION["password"]=$password;
-    $_SESSION["studentName"]=$studentName;
-    $_SESSION["email"]=$emailAddress;
-    $_SESSION["mobileNumber"]=$mobileNumber;
-    $_SESSION["course"]=$course;
-    $_SESSION["year"]=$year;
+    echo $username;
+    //$_SESSION["password"]=$password;
+    //$_SESSION["studentName"]=$studentName;
+    //$_SESSION["email"]=$emailAddress;
+    //$_SESSION["mobileNumber"]=$mobileNumber;
+    //$_SESSION["course"]=$course;
+    //$_SESSION["year"]=$year;
     header("location: DisplayProfile.php");
     //exit();
 //}

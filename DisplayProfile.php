@@ -1,2 +1,4 @@
 <?php
-echo $_SESSION["username"];
+
+echo $username;
+?>
