@@ -39,13 +39,16 @@ $sql = "SELECT content FROM userimages WHERE UserName = '".$username."'";
 $imagesResults = $link->query($sql);
 $size = sizeof($imagesResults);
 $count = 0;
-    while($row = mysqli_fetch_array($result))
+    while($row = mysqli_fetch_array($imageResults))
+    {
         while ($count < $size-1)
             {
-                echo '<img height="300 width="300" src="data:image;base64,'.$row[$count].' ">';
+                $rowtoDisplay = $row = mssql_fetch_row($count);
+                echo '<img height="300 width="300" src="data:image;base64,'.$rowtoDisplay['content'].' ">';
+                $count = $count+1;
                 echo '<br />';
             }
-
+    }
 
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
@@ -93,7 +96,7 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
 
             <?php
             echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
-            ?>
+            ?><br/>
 
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
             <span>Password: </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
