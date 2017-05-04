@@ -8,9 +8,9 @@ $username=$_SESSION["username"]; //Get username that has been entered
 $emailAddress=$_POST["email"]; //Get email address that has been entered
 $password=$_POST["password"]; //Get password that has been entered
 $mobileNumber=$_POST["phone"]; //Get mobile number that has been entered
-//$studentName = $_POST["studentName"];
-//$course = $_POST["course"];
-//$year = $_POST["year"];
+$studentName = $_POST["studentName"];
+$course = $_POST["course"];
+$year = $_POST["year"];
 
 $sql = "UPDATE users 
 SET UserName = '".$username."', 
@@ -22,11 +22,14 @@ WHERE UserName = '".$_SESSION["username"]."'";
 
 $link->query($sql);
 
-//$sql_two = "INSERT INTO userprofiles (UserName, EmailAddress, Password, MobileNumber) VALUES ('".$username."','".$emailAddress."','".$password."', '".$mobileNumber."')WHERE UserName = $username";
-//$link->query($sql_two);
+$sql = "UPDATE userprofiles 
+SET UserName = '".$username."', 
+EmailAddress = '".$emailAddress."', 
+Password = '".$password."', 
+MobileNumber = '".$mobileNumber."'
+WHERE UserName = '".$_SESSION["username"]."'";
 
-//$sql_three = "INSERT INTO profilepictures (userName) VALUES ('".$username."')";
-//$link->query($sql_three);
+$link->query($sql);
 
 echo $username;
 echo $emailAddress;
