@@ -3,18 +3,19 @@
 $username = $_POST["username"];
 
 include("dbConnect.php");
-    $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$studentName."'";
+
+    $studentNameQuery = "SELECT StudentName FROM userprofiles WHERE UserName = '".$username."'";
     $studentNameinfo = $link->query($studentNameQuery);
     $studentName = getSingleValueFromDatabaseArray($studentNameinfo);
 
-    $sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$studentName."'";
+    $sqlCourseQuery = "SELECT Course FROM userprofiles WHERE UserName = '".$username."'";
     $courseInfo = $link->query($sqlCourseQuery);
     $course =getSingleValueFromDatabaseArray($courseInfo);
 
-    $sqlProfilePicQuery = "SELECT * FROM profilepictures WHERE UserName = '".$studentName."'";
+    $sqlProfilePicQuery = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
     $profilePicturesResults = $link->query($sqlProfilePicQuery);
 
-    $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$studentName."'"; //Setup SQL query to get CustomerID from username
+    $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $yearInfo = $link->query($sqlYearQuery);
     $year =getSingleValueFromDatabaseArray($yearInfo);
 
@@ -61,7 +62,7 @@ include("dbConnect.php");
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
         <?php
         include "dbConnect.php";
-        $sql = "SELECT * FROM userimages WHERE UserName = '".$studentName."'";
+        $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
         $imagesResults = $link->query($sql);
 
         foreach( $imagesResults as $value ) {
