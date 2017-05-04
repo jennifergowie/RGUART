@@ -20,7 +20,7 @@
                 <div class="container">
                     <h4>Your Profile has been created</h4>
 
-                    <h4>Click here to <a href="../Login/login.php">login</a></h4>
+                    <h4>Click here to <a href="../Code/login.php">login</a></h4>
 
             <?php
             include("resources/HeaderandFooterSections/RGUArtistFooterSection.php");
