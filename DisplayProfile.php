@@ -33,7 +33,7 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
 
 $sql = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
 $profilePicturesResults = $link->query($sql);
-
+$imagesResultsArray=mysqli_fetch_array($profilePicturesResults);
 
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
@@ -80,7 +80,7 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <br/>
 
             <?php
-                echo '<img src="data:image/jpeg;base64,'.base64_encode( $profilePicturesResults['content'] ).'" width="100" height="100"/>';
+                echo '<img src="data:image/jpeg;base64,'.base64_encode( $imagesResultsArray['content'] ).'" width="100" height="100"/>';
             ?>
             <br/>
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
