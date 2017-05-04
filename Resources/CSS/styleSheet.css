@@ -17,11 +17,10 @@ body {
 }
 .bg {
     /* The image used */
-    background-image: url("../Images/RguPaintImage-1.jpg");
+    background-image: url("../Images/logoutImage.jpg");
 
     /* Full height */
     height: 100%;
-
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;

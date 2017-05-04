@@ -11,17 +11,17 @@ include("dbConnect.php");
     $courseInfo = $link->query($sqlCourseQuery);
     $course =getSingleValueFromDatabaseArray($courseInfo);
 
-    $ProfileImageSQLQuery = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
-    $ProfilePictureToDisplay = $link->query($ProfileImageSQLQuery);
+    //$ProfileImageSQLQuery = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
+    //$ProfilePictureToDisplay = $link->query($ProfileImageSQLQuery);
 
-    $fileName=$ProfilePictureToDisplay['name'];
-    $fileType=$ProfilePictureToDisplay['type'];
-    $fileSize=$ProfilePictureToDisplay['size'];
-    $fileContent=$ProfilePictureToDisplay['content'];
+    //$fileName=$ProfilePictureToDisplay['name'];
+    //$fileType=$ProfilePictureToDisplay['type'];
+    //$fileSize=$ProfilePictureToDisplay['size'];
+    //$fileContent=$ProfilePictureToDisplay['content'];
 
 
-    $ImagesSQLQuery = "SELECT * FROM userimages WHERE UserName = '".$username."'";
-    $ImagePicturesToDisplay = $link->query($ImagesSQLQuery);
+    //$ImagesSQLQuery = "SELECT * FROM userimages WHERE UserName = '".$username."'";
+    //$ImagePicturesToDisplay = $link->query($ImagesSQLQuery);
 
     $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $yearInfo = $link->query($sqlYearQuery);
@@ -29,11 +29,10 @@ include("dbConnect.php");
 
     $_SESSION["searchedStudentsName"] = $studentName;
     $_SESSION["searchedStudentsCourse"] = $course;
-    $_SESSION["searchedStudentProfilePicture"] = $fileContent;
     $_SESSION["searchedStudentYear"]= $year;
 
+header("Location: DisplaySearchInfo.php");
 
-    header ("Location:DisplayUser.php");
 
 function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
 {
