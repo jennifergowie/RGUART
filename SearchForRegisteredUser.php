@@ -28,11 +28,13 @@ include("dbConnect.php");
     $year =getSingleValueFromDatabaseArray($yearInfo);
 
     $_SESSION["searchedStudentsName"] = $studentName;
-    echo $_SESSION["searchedStudentsName"];
+    $_SESSION["searchedStudentsName"];
     $_SESSION["searchedStudentsCourse"] = $course;
     $_SESSION["searchedStudentYear"]= $year;
 
-//header("Location: DisplaySearchInfo.php");
+    echo $_SESSION["searchedStudentsName"];
+    
+header("Location: DisplaySearchInfo.php");
 
 
 function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
