@@ -53,13 +53,7 @@ include("dbConnect.php");
         <br/>
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/></center>
         <br/>
-        <?php
-            if ($profilePicturesResults != null) {
-                echo '<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>';
-            }
-        ?><br/>
-
-
+        
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
