@@ -34,7 +34,7 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
 $sql = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
 $sth = $link->query($sql);
 $result=mysqli_fetch_array($sth);
-echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'"/>';
+
 
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
@@ -43,7 +43,7 @@ $_SESSION["emailAddress"] = $emailAddress;
 $_SESSION["mobileNumber"] = $mobileNumber;
 $_SESSION["course"] = $course;
 $_SESSION["year"] = $year;
-
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
 
 $link->close();
 
