@@ -34,7 +34,7 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
 //if(checkPassword($password,$userPassword)){
     echo $username;
     $_SESSION["username"] = $username;
-    $_SESSION["password"] = $password;
+    $_SESSION["password"] = $userPassword;
     //echo $studentName;
     //echo $emailAddress;
     //echo $mobileNumber;
