@@ -34,6 +34,14 @@ WHERE UserName = '".$_SESSION["username"]."'";
 
 $link->query($sql);
 
+$_SESSION["username"] = $username;
+$_SESSION["password"] = $userPassword;
+$_SESSION["studentName"] = $studentName;
+$_SESSION["emailAddress"] = $emailAddress;
+$_SESSION["mobileNumber"] = $mobileNumber;
+$_SESSION["course"] = $course;
+$_SESSION["year"] = $year;
+
 echo $username;
 echo $emailAddress;
 echo $password;
