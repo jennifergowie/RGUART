@@ -26,7 +26,10 @@ $sql = "UPDATE userprofiles
 SET UserName = '".$username."', 
 EmailAddress = '".$emailAddress."', 
 Password = '".$password."', 
-MobileNumber = '".$mobileNumber."'
+MobileNumber = '".$mobileNumber."',
+StudentName = '".$studentName."',
+Course = '".$course."',
+Year = '".$year."'
 WHERE UserName = '".$_SESSION["username"]."'";
 
 $link->query($sql);
