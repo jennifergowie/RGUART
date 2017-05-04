@@ -25,7 +25,7 @@ session_destroy();
 
     <h2>You are logged out</h2>
     <h2>Thankyou for using RGU Student Art</h2>
-    <center><span>Click to <a href="login.php">login</a> again</span></center>
+    <center><span>Click to <a href="../login.php">login</a> again</span></center>
 
     <?php
     include("../Resources/HeaderandFooterSections/RGUArtistFooterSection.php");
