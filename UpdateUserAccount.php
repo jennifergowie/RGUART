@@ -34,9 +34,11 @@ WHERE UserName = '".$_SESSION["username"]."'";
 
 $link->query($sql);
 
+$link->close(); //Close  database link
+
 echo $username;
 echo $emailAddress;
 echo $password;
 echo $mobileNumber;
 
-header("location: RegisterSuccess.php");
+header("location: SuccessfullyUpdated.php");
