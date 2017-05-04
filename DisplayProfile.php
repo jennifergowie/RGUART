@@ -17,3 +17,8 @@
             <br/>
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
             <span>Password: </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
+            <span>Student Name: </span><?php echo "<b>{$_SESSION["studentName"]}</b>"?><br>
+            <span>Email Address: </span><?php echo "<b>{$_SESSION["emailAddress"]}</b>"?><br>
+            <span>Mobile Number: </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
+            <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
+            <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>

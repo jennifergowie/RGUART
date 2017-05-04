@@ -35,11 +35,12 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
     echo $username;
     $_SESSION["username"] = $username;
     $_SESSION["password"] = $userPassword;
-    //echo $studentName;
-    //echo $emailAddress;
-    //echo $mobileNumber;
-    //echo $course;
-    //echo $year;
+    $_SESSION["studentName"] = $studentName;
+    $_SESSION["emailAddress"] = $emailAddress;
+    $_SESSION["mobileNumber"] = $mobileNumber;
+    $_SESSION["course"] = $course;
+    $_SESSION["year"] = $year;
+
     header("location: DisplayProfile.php");
     //exit();
 //}
