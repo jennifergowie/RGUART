@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<form action="Code/LoginValidation.php" method="post">
+<form action="LoginValidation.php" method="post">
     <main>
         <div class="bg">
             <br/>
