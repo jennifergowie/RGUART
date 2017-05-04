@@ -35,22 +35,6 @@ $sql = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
 $sth = $link->query($sql);
 $result = mysqli_fetch_array($sth);
 
-$sql = "SELECT content FROM userimages WHERE UserName = '".$username."'";
-$imagesResults = $link->query($sql);
-$size = sizeof($imagesResults);
-$count = 0;
-    while($row = mysqli_fetch_array($imageResults))
-    {
-        while ($count < $size-1)
-            {
-                $rowtoDisplay = $row = mssql_fetch_row($count);
-                echo '<img src="data:image/jpeg;base64,'.base64_encode( $rowtoDisplay['content']).'" width="100" height="100"/>';
-                echo '<br />';
-                $count = $count+1;
-
-            }
-    }
-
 $_SESSION["username"] = $username;
 $_SESSION["password"] = $userPassword;
 $_SESSION["studentName"] = $studentName;
@@ -106,6 +90,24 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <span>Mobile Number: </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
             <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
+
+        <?php
+            $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
+            $imagesResults = $link->query($sql);
+            $size = sizeof($imagesResults);
+            $loopSize = $size -1;
+            $count = 0;
+            //while($row = mysqli_fetch_array($imageResults))
+            //{
+            foreach( $imagesResults as $value ) {
+                //$rowtoDisplay = $imagesResults = mssql_fetch_row[$count];
+                echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+                echo '<br />';
+            }
+
+            //}
+        
+        ?>
 
             <nav style="margin-top: 5px">
             <ul>
