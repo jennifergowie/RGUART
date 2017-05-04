@@ -53,19 +53,20 @@ include("dbConnect.php");
         <br/>
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/></center>
         <br/>
-        
+
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
-        //<?php
-        //include "dbConnect.php";
-        //$sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
-        //$imagesResults = $link->query($sql);
-
-        //foreach( $imagesResults as $value ) {
-          //  echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-            //echo '<br />';
-        //}
+        <?php
+        include "dbConnect.php";
+        $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
+        $imagesResults = $link->query($sql);
+        if ($imagesResults = true){
+        foreach( $imagesResults as $value ) {
+         echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+         echo '<br />';
+        }
+        }
         ?>
 
 </header>
