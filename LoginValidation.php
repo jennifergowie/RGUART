@@ -44,7 +44,7 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
         $_SESSION["mobileNumber"]=$mobileNumber;
         $_SESSION["course"]=$course;
         $_SESSION["year"]=$year;
-        header("location: ../Main/Options.php");
+        header("location:Options.php");
         exit();
     }
 
