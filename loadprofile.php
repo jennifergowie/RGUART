@@ -31,8 +31,6 @@ $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"
 $yearInfo = $link->query($sqlYearQuery);
 $year =getSingleValueFromDatabaseArray($yearInfo);
 
-//if(checkPassword($password,$userPassword)){
-    echo $username;
     $_SESSION["username"] = $username;
     $_SESSION["password"] = $userPassword;
     $_SESSION["studentName"] = $studentName;
@@ -42,12 +40,6 @@ $year =getSingleValueFromDatabaseArray($yearInfo);
     $_SESSION["year"] = $year;
 
     header("location: DisplayProfile.php");
-    //exit();
-//}
-
-//else {
-  //  destroySession();
-//}
 
 $link->close();
 
