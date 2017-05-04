@@ -19,8 +19,8 @@
 
             <nav style="margin-top: 5px">
                 <ul>
-                    <li><a href="redunantfiles/UpdateAccount.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                                                                                        src="Resources/Images/clematis.png" alt="LogoutIcon">Update Profile</a></li>
+                    <li><a href="UpdateAccount.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
+                                                                          src="Resources/Images/clematis.png" alt="LogoutIcon">Update Profile</a></li>
 
                     <li><a href="fileupload.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
                                                                        src="Resources/Images/clematis.png" alt="LogoutIcon">Change Profile Picture</a></li>
