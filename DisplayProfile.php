@@ -80,9 +80,9 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <br/>
 
             <?php
-            echo '<img src="data:image/jpeg;base64,'.base64_encode( $profilePicturesResults['content'] ).'" width="100" height="100"/>';
-            ?><br/>
-
+                echo '<img src="data:image/jpeg;base64,'.base64_encode( $profilePicturesResults['content'] ).'" width="100" height="100"/>';
+            ?>
+            <br/>
             <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
             <span>Password: </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
             <span>Student Name: </span><?php echo "<b>{$_SESSION["studentName"]}</b>"?><br>
