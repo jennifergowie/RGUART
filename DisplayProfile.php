@@ -88,7 +88,9 @@ function getSingleValueFromDatabaseArray($dbArray) //Function to get password fr
             <span>Mobile Number: </span><?php echo "<b>{$_SESSION["mobileNumber"]}</b>"?><br>
             <span>Course: </span><?php echo "<b>{$_SESSION["course"]}</b>"?><br>
             <span>Year: </span><?php echo "<b>{$_SESSION["year"]}</b>"?><br>
-
+        <?php
+        echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'" width="100" height="100"/>';
+        ?>
         <nav style="margin-top: 5px">
             <ul>
                 <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
