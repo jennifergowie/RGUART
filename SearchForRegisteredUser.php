@@ -63,15 +63,15 @@ include("dbConnect.php");
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
-        <?php
-        include "dbConnect.php";
-        $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
-        $imagesResults = $link->query($sql);
+        //<?php
+        //include "dbConnect.php";
+        //$sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
+        //$imagesResults = $link->query($sql);
 
-        foreach( $imagesResults as $value ) {
-            echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-            echo '<br />';
-        }
+        //foreach( $imagesResults as $value ) {
+          //  echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+            //echo '<br />';
+        //}
         ?>
 
 </header>
