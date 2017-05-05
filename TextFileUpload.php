@@ -4,7 +4,7 @@ For this http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files
 was consulted.*/
 
 include("SessionCheck.php");
-if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0 && $_FILES['file']['type'] == 'text/plain') {
+if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
     $userName = $_SESSION["username"];
     $fileName = $_FILES['userfile']['name'];
     $tmpName = $_FILES['userfile']['tmp_name'];
@@ -25,7 +25,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0 && $_FILES['file']
 
     //The following updates the profile pictures table.
     $sql = "INSERT INTO userfiles (userName, name, size, type, content ) ".
-        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content') WHERE UserName = '" . $_SESSION["username"] . "'";
+        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')" ;
 
     $result = $link->query($sql);
 
