@@ -16,7 +16,7 @@
         <br/>
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
         <br/>
-
+        <h3>Main Menu</h3>
         <nav style="margin-top: 5px">
         <ul>
             <li><a href="UserProfileAdmin.php" class="centered"><img height="50" width="50" class="navBarIcon centered" src="Resources/Images/Spring Filled-50.png" alt="AccountIcon;">Your Account</a></li>

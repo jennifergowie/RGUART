@@ -19,9 +19,9 @@
         <div class="bg">
             <main>
                 <div class="container">
-                    <h4>Your account has been created</h4>
+                    <h3>Your account has been created</h3>
 
-                    <h4>Click here to <a href="login.php">login</a></h4>
+                    <h3>Click here to <a href="login.php">login</a></h3>
 
             <?php
             include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");

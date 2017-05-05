@@ -14,9 +14,9 @@
     <div class="bg">
         <main>
             <div class="container">
-                <h4>Your profile picture has been updated</h4>
+                <h3>Your profile picture has been updated</h3>
 
-                <h4>Click here to <a href="Options.php">go back to main menu</a></h4>
+                <h3>Click here to <a href="Options.php">go back to main menu</a></h3>
 
                 <?php
                 include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");

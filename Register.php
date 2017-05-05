@@ -17,7 +17,7 @@
         <br/>
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
         <br/>
-            <h2>Create New Account</h2>
+            <h3>Create New Account</h3>
             <form action="RegisterUser.php" method="post" autocomplete="off">
                 <input type="username" name="username" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required/>
                 <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" required/>

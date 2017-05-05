@@ -16,9 +16,9 @@
     <div class="bg">
         <main>
             <div class="container">
-                <h4>Your account has been deleted</h4>
+                <h3>Your account has been deleted</h3>
 
-                <h4>Click here to <a href="login.php">return to the login page</a></h4>
+                <h3>Click here to <a href="login.php">return to the login page</a></h3>
 
                 <?php
                 include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");

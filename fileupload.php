@@ -21,23 +21,29 @@ was consulted.-->
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"></center><br/>
             <br/>
             <form method="post" action="uploads.php" enctype="multipart/form-data">
-            <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+                <h3>Upload Profile Picture</h3>
+            <center><table>
                 <tr>
                 <td width="246">
-                    <input name="userfile" type="file" id="userfile">
+
                     <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                    <input name="userfile" type="file" id="userfile">
+
                 </td>
                 <td width="80"><input name="upload" type="submit" class="box" id="upload" value=" Upload "></td>
                 </tr>
-                </table>
-</form>
+            </center></table>
+            </form>
+        <?php
+        include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");
+        ?>
+
     </div>
+
 </header>
 
 </main>
 </body>
-<?php
-include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");
-?>
+
 
 </html>

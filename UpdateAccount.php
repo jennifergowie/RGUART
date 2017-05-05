@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration Page</title>
+    <title>Update Account</title>
     <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 
@@ -22,7 +22,7 @@
     <div class="bg">
         <br/>
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo">
-        <h2>Update Account</h2>
+        <h3>Update Account</h3>
         <form action="UpdateUserAccount.php" method="post" autocomplete="off">
             <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" required/>
             <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required/>

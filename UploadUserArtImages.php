@@ -24,7 +24,7 @@ include("SessionCheck.php");
     <div class="bg">
         <br/>
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo">
-        <h2>Update Profile Picture</h2>
+        <h3>Upload Image</h3>
             <form method="post" action="uploadUserImages.php" enctype="multipart/form-data">
             <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
                 <tr>

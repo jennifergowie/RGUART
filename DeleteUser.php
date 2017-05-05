@@ -15,7 +15,7 @@
             <br/>
             <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/>
             <br/>
-            <h2>Delete Profile</h2>
+            <h3>Delete Profile</h3>
                  <input type="username" name="username" placeholder="User Name" onfocus="this.placeholder=''" onblur="this.placeholder='Matriculation Number'" required><br>
                  <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required><br>
                  <button class="inputButton" type="submit">Delete Profile</button><br/>
