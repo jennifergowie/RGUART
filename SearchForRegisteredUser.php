@@ -61,7 +61,7 @@ include("dbConnect.php");
             /*The following displays the users profile picture.
             To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
             was consulted.*/
-            echo '<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>';
+            echo '<center>','<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>';
         }
         ?><br/>
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
