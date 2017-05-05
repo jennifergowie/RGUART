@@ -21,7 +21,7 @@ $text;
     $myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
     // Output one line until end-of-file
         while(!feof($myfile)) {
-         $text = $text + fgets($myfile) . "<br>";
+         $content = $content + fgets($myfile) . "<br>";
 }
     fclose($myfile);
 //if (!get_magic_quotes_gpc()) {
@@ -32,13 +32,8 @@ $text;
 
     //The following updates the profile pictures table.
     $sql = "INSERT INTO userfiles (userName, name, size, type, content ) ".
-        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$text')" ;
-
-
-
-
-
-    $result = $link->query($sql);
+            "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')" ;
+            $result = $link->query($sql);
 
     //Loads the profile picture uploaded success page.
     header("location: TextConfirm.php");
