@@ -2,7 +2,7 @@
 /*This file uploads the users, userprofiles and profilepictures tables, as the user can only have one profile picture
 this file saves the users, username to the profilepictures table.*/
 
-//session_start();
+session_start();
 
 include("dbConnect.php");    //Establish database connection
 
