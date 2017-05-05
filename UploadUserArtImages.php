@@ -7,7 +7,7 @@ was consulted.-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Update Profile Picture</title>
+    <title>Upload Images</title>
     <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 
