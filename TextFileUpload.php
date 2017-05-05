@@ -17,10 +17,14 @@ if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
     //$content = addslashes($content);
     //fclose($getTheFile);
 
-    $myfile = fopen($fileName, "r") or die("Unable to open file!");
-    $content = fgets($myfile);
+$text;
+    $myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+    // Output one line until end-of-file
+        while(!feof($myfile)) {
+         $text = $text + fgets($myfile) . "<br>";
+}
     fclose($myfile);
-    //if (!get_magic_quotes_gpc()) {
+//if (!get_magic_quotes_gpc()) {
       //  $fileName = addslashes($fileName);
     //}
 
@@ -28,7 +32,7 @@ if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
 
     //The following updates the profile pictures table.
     $sql = "INSERT INTO userfiles (userName, name, size, type, content ) ".
-        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')" ;
+        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$text')" ;
 
 
 
