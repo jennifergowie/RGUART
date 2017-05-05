@@ -1,16 +1,16 @@
 <?php
 //The script to delete the user details from all the tables in the database.
 
-    //session_start();
-
     include("SessionCheck.php");
     include("dbConnect.php");
 
     $sessionUserName = $_SESSION["username"];
+    $password = $_SESSION["password"];
     $username= "username";
+
     $enteredPassword = "password";
 
-    if (($sessionUserName == $username)&&($enteredPassword == password)) {
+    if (($sessionUserName = $username)&($enteredPassword = password)) {
 
         $DeleteUserLoginSQL = "DELETE * FROM users, WHERE userName = $username";
         $DeleteUserProfileExecute = $link->query($DeleteUserLoginSQL);
