@@ -43,3 +43,9 @@
                 <?php
                     include("Resources/HeaderandFooterSections/RGUArtistFooterSection.php");
                 ?>
+            </nav>
+        </center>
+    </div>
+</header>
+</body>
+</html>

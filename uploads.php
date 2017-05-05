@@ -1,5 +1,5 @@
 <?php
-/*This php file uploads the choosen profile picture to the user profile database.
+/*This php file uploads the chosen profile picture to the user profile table.
 For this http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
 was consulted.*/
 

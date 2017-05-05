@@ -1,6 +1,5 @@
 <?php
 //This file obtains the details stored with the userprofiles, profilepictures and userimages tables.
-//session_start(); // Start Session
 
     include("SessionCheck.php");
     include("dbConnect.php");    //Establish database connection
@@ -123,5 +122,7 @@ http://php.net/manual/en/control-structures.foreach.php was consulted for this f
                 <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
                 src="Resources/Images/Spring Filled-50.png" alt="LogoutIcon">Return to Menu</a></li>
             </ul>
-</header>
+    </header>
 
+    </body>
+</html>

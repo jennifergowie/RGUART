@@ -1,5 +1,5 @@
 <?php
-/*This php file uploads the choosen profile picture to the user profile database.
+/*This php file uploads the chosen User Images to the userImages table.
 For this http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
 was consulted.*/
 include("SessionCheck.php");

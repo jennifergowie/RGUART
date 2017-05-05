@@ -1,4 +1,5 @@
 <?php
+/*searches for a registered user*/
 
 $username = $_POST["username"];
 

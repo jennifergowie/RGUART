@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!--This file calls the uploads.php file to load the users profile picture.
-This php file uploads the choosen profile picture to the user profile database.
+<!--This file calls the Textfileupload.php to load the text files.
 For this http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
 was consulted.-->
 

@@ -1,5 +1,5 @@
 <?php
-/*This php file uploads the choosen profile picture to the user profile database.
+/*This php file uploads the text files to the user profile table.
 For this http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
 was consulted.*/
 
@@ -18,13 +18,7 @@ if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
     fclose($getTheFile);
 
 
-   // $myfile = fopen($fileName, "r") or die("Unable to open file!");
-    // Output one line until end-of-file
-     //   while(!feof($myfile)) {
-       //  $content = $content + fgets($myfile) . "<br>";
-
-   // fclose($myfile);
-if (!get_magic_quotes_gpc()) {
+    if (!get_magic_quotes_gpc()) {
       $fileName = addslashes($fileName);
     }
 

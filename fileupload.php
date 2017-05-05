@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--This file calls the uploads.php file to load the users profile picture.
-This php file uploads the choosen profile picture to the user profile database.
+This php file uploads the chosen profile picture to the profilepicture table.
 For this http://www.php-mysql-tutorial.com/wikis/mysql-tutorials/uploading-files-to-mysql-database.aspx
 was consulted.-->
 
@@ -44,6 +44,5 @@ was consulted.-->
 
 </main>
 </body>
-
-
 </html>
+
