@@ -91,8 +91,8 @@ http://php.net/manual/en/control-structures.foreach.php was consulted for this f
                 /*The following displays the users profile picture.
                 To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
                 was consulted.*/
-                echo '<center>','<img src="data:image/jpeg;base64,'.base64_encode( $imagesResultsArray['content'] ).'" width="100" height="100"/>';
-                ?>
+                echo '<center>','<img src="data:image/jpeg;base64,'.base64_encode( $imagesResultsArray['content'] ).'" width="100" height="100"/>','</center>';
+                ?><br/>
 
                 <span>Username: </span><?php echo "<b>{$_SESSION["username"]}</b>"?><br>
                 <span>Password: </span><?php echo "<b>{$_SESSION["password"]}</b>"?><br>
