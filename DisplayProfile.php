@@ -116,14 +116,14 @@ http://php.net/manual/en/control-structures.foreach.php was consulted for this f
                         /*To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
                         was consulted.*/
                         echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-                        echo '<br />';
+                        //echo '<br />';
                     }
             ?>
 
             <nav style="margin-top: 5px">
             <ul>
                 <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
+                src="Resources/Images/Spring Filled-50.png" alt="LogoutIcon">Return to Menu</a></li>
             </ul>
 </header>
 

@@ -26,7 +26,7 @@
                 <nav style="margin-top: 5px">
 
                <centre><li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-               src="Resources/Images/clematis.png" alt="AccountIcon;"></a>Main Menu</li>
+               src="Resources/Images/Spring Filled-50.png" alt="main"></a>Main Menu</li>
 
                 </nav>
                     <?php

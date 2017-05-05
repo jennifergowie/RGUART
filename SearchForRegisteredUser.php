@@ -89,7 +89,7 @@ include("dbConnect.php");
         <nav style="margin-top: 5px">
         <ul>
             <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-            src="Resources/Images/clematis.png" alt="LogoutIcon">Return to Menu</a></li>
+            src="Resources/Images/Spring Filled-50.png" alt="Main">Return to Menu</a></li>
         </ul>
 </header>
 
