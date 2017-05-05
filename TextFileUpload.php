@@ -18,7 +18,7 @@ if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
     //fclose($getTheFile);
 
 $text;
-    $myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+    $myfile = fopen($fileName, "r") or die("Unable to open file!");
     // Output one line until end-of-file
         while(!feof($myfile)) {
          $content = $content + fgets($myfile) . "<br>";
