@@ -12,8 +12,9 @@ include("dbConnect.php");
     $courseInfo = $link->query($sqlCourseQuery);
     $course =getSingleValueFromDatabaseArray($courseInfo);
 
-    $sqlProfilePicQuery = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
-    $profilePicturesResults = $link->query($sqlProfilePicQuery);
+    $sqlProfilePic = "SELECT * FROM profilepictures WHERE UserName = '".$username."'";
+    $profilePicturesResults = $link->query($sqlProfilePic);
+    $imagesResultsArray=mysqli_fetch_array($profilePicturesResults);
 
     $sqlYearQuery = "SELECT Year FROM userprofiles WHERE UserName = '".$username."'"; //Setup SQL query to get CustomerID from username
     $yearInfo = $link->query($sqlYearQuery);
@@ -61,8 +62,8 @@ include("dbConnect.php");
             /*The following displays the users profile picture.
             To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
             was consulted.*/
-            echo '<center>','<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>','</center>';
-        
+            echo '<center>','<img src="data:image/jpeg;base64,' . base64_encode($imagesResultsArray['content']) . '" width="100" height="100"/>','</center>';
+
         ?><br/>
         <h3>Public Profile</h3>
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
@@ -72,19 +73,19 @@ include("dbConnect.php");
         <?php
         /*The following obtains all the user images that have been uploaded by the searched user.
          *there is no limit to how many images the user can store within the database.*/
+                include "dbConnect.php";
+                $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
+                $imagesResults = $link->query($sql);
 
-        include "dbConnect.php";
-        $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
-        $imagesResults = $link->query($sql);
-                //if ($imagesResults = true){
-                 foreach( $imagesResults as $value ) {
-        /*To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
-        was consulted.*/
-        echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-        echo '<br />';
-
-        }
-        ?>
+                /*The following obtains all the user images that have been uploaded by the user.
+                *there is no limit to how many images the user can store within the database.*/
+                    foreach( $imagesResults as $value ) {
+                        /*To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
+                        was consulted.*/
+                        echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+                        //echo '<br />';
+                    }
+            ?>
 
 
         <nav style="margin-top: 5px">
