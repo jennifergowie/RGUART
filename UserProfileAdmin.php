@@ -33,8 +33,8 @@
                     <li><a href="UploadUserArtImages.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
                     src="Resources/Images/Spring Filled-50.png">Upload Image</a></li>
 
-                    <li><a href="DeleteUser.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
-                    src="Resources/Images/Spring Filled-50.png" >Delete Profile</a></li>
+                    <li><a href="UploadText.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
+                    src="Resources/Images/Spring Filled-50.png" >Upload text file</a></li>
 
                     <li><a href="Options.php" class="centered"><img height="50" width="50" class="navBarIcon centered"
                     src="Resources/Images/Spring Filled-50.png">Return to Menu</a></li>
