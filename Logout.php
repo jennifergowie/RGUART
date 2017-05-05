@@ -24,11 +24,6 @@ session_destroy();
     <br/>
     <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"></center>
 
-    <?php
-    session_unset();
-    session_destroy();
-    exit();
-    ?>
 
     <h3>You are logged out</h3>
     <h3>Thankyou for using RGU Student Art</h3>
