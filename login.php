@@ -1,4 +1,6 @@
 <html lang="en">
+<!--login page where the user can enter their username and password.-->
+
 <head>
     <meta charset="UTF-8">
     <title>RGU Student Art - Login Page</title>

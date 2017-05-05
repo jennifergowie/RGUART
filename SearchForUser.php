@@ -1,6 +1,8 @@
+<!DOCTYPE html>
+<!--A form that allows users to enter user information and this returns their profile if stored.-->
+
 <?php include("SessionCheck.php");?>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

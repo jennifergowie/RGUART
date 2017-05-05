@@ -7,11 +7,13 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
     destroySession();
 }
 
-    include("dbConnect.php");    //Establish database connection
+    include("dbConnect.php");
 
-    $username=$_POST["username"]; //Get username that has been entered
-    $password=$_POST["password"]; //Get password that has been entered
+    //Gets the information entered by the user.
+    $username=$_POST["username"];
+    $password=$_POST["password"];
 
+    //Obtains the information from the userprofiles table
     $sqlPassword = "SELECT Password FROM userprofiles WHERE UserName = '".$username."'";
     $userPasswordArray = $link->query($sqlPassword);
     $userPassword = getSingleValueFromDatabaseArray($userPasswordArray);
@@ -36,6 +38,7 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
     $yearInfo = $link->query($sqlYearQuery);
     $year =getSingleValueFromDatabaseArray($yearInfo);
 
+    //Checks the password and if these match the session varaibles are set.
     if(checkPassword($password,$userPassword)){
         $_SESSION["username"]=$username;
         $_SESSION["password"]=$password;
@@ -54,24 +57,23 @@ if(empty($_POST) or empty($_POST["username"]) or empty($_POST["password"]))
 
 $link->close();
 
-function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
-{
+    function getSingleValueFromDatabaseArray($Items){
+    /*This function iterates through an array and conbines the details to form an item
+    http://php.net/manual/en/control-structures.foreach.php was consulted for this function.*/
 
-    foreach ($dbArray as $key => $val)
-    {
-        foreach ($val as $value)
-        {
-            $output= $value;
+        foreach ($Items as $key => $val) {
+            foreach ($val as $value){
+                $stringToBeReturned= $value;
+            }
         }
+
+    return $stringToBeReturned;
+
     }
 
-    return $output;
 
-}
-
-function checkPassword($password, $userPassword) // Function to cehck input password against password in database
-{
-
+    function checkPassword($password, $userPassword){
+    //Checks the password.
 
     if($password==$userPassword)
     {
@@ -85,15 +87,11 @@ function checkPassword($password, $userPassword) // Function to cehck input pass
 }
 
 
-function destroySession()
-
-{
-    session_unset();
-    session_destroy();
-    header("location: login.php");
-    exit();
-
-}
-
-
+    function destroySession()
+    {
+        session_unset();
+        session_destroy();
+        header("location: login.php");
+        exit();
+    }
 ?>

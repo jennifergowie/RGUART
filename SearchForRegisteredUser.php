@@ -24,21 +24,24 @@ include("dbConnect.php");
     $_SESSION["searchedStudentYear"]= $year;
 
 
-    function getSingleValueFromDatabaseArray($dbArray) //Function to get password from database array
-    {
+    function getSingleValueFromDatabaseArray($Items){
+    /*This function iterates through an array and conbines the details to form an item
+    http://php.net/manual/en/control-structures.foreach.php was consulted for this function.*/
 
-    foreach ($dbArray as $key => $val)
+    foreach ($Items as $key => $val)
     {
         foreach ($val as $value)
         {
-            $output= $value;
+            $stringToBeReturned= $value;
         }
     }
 
-    return $output;
+    return $stringToBeReturned;
 
-}
+    }
+
 ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,20 +58,29 @@ include("dbConnect.php");
         <br/>
         <?php
         if ($profilePicturesResults = true) {
+            /*The following displays the users profile picture.
+            To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
+            was consulted.*/
             echo '<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>';
         }
         ?><br/>
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
         <span>Course: </span><?php echo "<b>{$_SESSION["searchedStudentsCourse"]}</b>"?><br>
         <span>Year: </span><?php echo "<b>{$_SESSION["searchedStudentYear"]}</b>"?><br>
+
         <?php
+        /*The following obtains all the user images that have been uploaded by the searched user.
+         *there is no limit to how many images the user can store within the database.*/
+
         include "dbConnect.php";
         $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
         $imagesResults = $link->query($sql);
                 if ($imagesResults = true){
-                    foreach( $imagesResults as $value ) {
-                    echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-                    echo '<br />';
+                 foreach( $imagesResults as $value ) {
+                 /*To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
+                 was consulted.*/
+                 echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+                 echo '<br />';
         }
         }
         ?>

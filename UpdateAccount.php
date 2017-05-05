@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- NB: add comments, sort formatting! -->
+<!-- Loads a form for the user to update their user account-->
 
 <html lang="en">
 <head>
@@ -24,7 +24,6 @@
         <img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo">
         <h2>Update Account</h2>
         <form action="UpdateUserAccount.php" method="post" autocomplete="off">
-            <!--<input type="username" name="username" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required/>-->
             <input type="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Email Address'" required/>
             <input type="password" name="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required/>
             <input type="tel" name="phone" placeholder="Mobile Number" onfocus="this.placeholder=''" onblur="this.placeholder='Mobile Number'" required/>

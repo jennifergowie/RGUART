@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<!-- NB: add comments, sort formatting! -->
+<!--Confirms the profile has been updated. -->
 
 <html lang="en">
 

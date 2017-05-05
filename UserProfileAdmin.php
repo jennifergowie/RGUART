@@ -1,6 +1,8 @@
+<!DOCTYPE html>
+<!--displays a user menu to the user, this is their account options.-->
 <?php include("SessionCheck.php");?>
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">

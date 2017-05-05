@@ -1,44 +1,17 @@
-/* NB: add comments throughout! */
-
 body {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
-.newUserbg{
-    background-image: url("../Images/NewUserImage.jpg");
 
-    /* Full height */
-    height: 1000px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .bg {
-    /* The image used */
-    background-image: url("../Images/logoutImage.jpg");
-
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
+    /* The image used taken from https://www.pinterest.de/pin/8022105566511378/*/
+    background-image: url("../Images/Background-01-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.logOutBg{
-    /* The image used */
-    background-image: url("../Images/logoutImage.jpg");
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 main
 {
@@ -49,7 +22,7 @@ main
 }
 
 .inputButton {
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     color: black;
     border: none;
     border-radius: 5px;
@@ -72,13 +45,8 @@ main
     height:100px;
 }
 
-img.navBarIcon
-{
-    height: 50px;
-    width: 50px;
-}
-
-input[type=username], input[type=tel],input[type=surname], input[type=email],input[type=StudentName],input[type=Year], input[type=password], input[type=course] {
+    input[type=username], input[type=tel], input[type=email],
+    input[type=StudentName],input[type=Year], input[type=password], input[type=course] {
     border: 2px solid lightblue;
     border-radius: 5px;
     width: 100%;
@@ -137,7 +105,7 @@ table, td, th {
     max-width: 400px;
 }
 
-/* Navbar formatting start */
+
 nav>ul {
     list-style-type: none;
     overflow: hidden;

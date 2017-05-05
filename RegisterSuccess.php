@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<!-- NB: add comments, sort formatting! -->
+<!-- Confirms the account has been created -->
 
 <html lang="en">
 

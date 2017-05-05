@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
+    <!--Confirms the user has been deleted, then provides a link to return to the login page.-->
 
-<html lang="en">
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Account Deleted</title>
-    <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
-
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Account Deleted</title>
+        <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
+    </head>
 
 <body>
 

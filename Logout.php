@@ -9,6 +9,7 @@ session_destroy();
 <!DOCTYPE html>
 
 <html lang="en">
+<
 <head>
     <meta charset="UTF-8">
     <title>Logout</title>
@@ -25,6 +26,11 @@ session_destroy();
 
     <h2>You are logged out</h2>
     <h2>Thankyou for using RGU Student Art</h2>
+    <?php
+        session_unset();
+        session_destroy();
+        exit();
+    ?>
     <center><span>Click to <a href="login.php">login</a> again</span></center>
 
     <?php

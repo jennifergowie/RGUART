@@ -1,12 +1,10 @@
 <?php
+//The script to delete the user details from all the tables in the database.
 
-
-    session_start();
+    //session_start();
 
     include("SessionCheck.php");
     include("dbConnect.php");
-
-
 
     $sessionUserName = $_SESSION["username"];
     $username= "username";
@@ -29,5 +27,6 @@
 
     }
 
+    //Calls the DeleteUserValidation.php to confirm that the user has been deleted from the system.
     header("location: DeleteUserValidation.php");
 ?>

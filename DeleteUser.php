@@ -1,7 +1,9 @@
 <html lang="en">
+<!--This file gets the users, user name and password and calls the DeleteUserSearch.php file to delete the profile.-->
+
 <head>
     <meta charset="UTF-8">
-    <title>Delete User</title>
+    <title>Delete User Profile</title>
     <link rel="stylesheet" type="text/css" href="Resources/CSS/styleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas|Quicksand">
 

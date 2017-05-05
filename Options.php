@@ -1,6 +1,7 @@
-<?php include("SessionCheck.php");?>
-
 <!DOCTYPE html>
+<!--Displays menu options to the user, they can access their account information, search for an user and logout.-->
+
+<?php include("SessionCheck.php");?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

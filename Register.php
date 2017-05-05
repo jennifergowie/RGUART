@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<!-- NB: add comments, sort formatting! -->
+<!-- This enables a user to sign up to the website.-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
