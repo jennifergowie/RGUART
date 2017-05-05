@@ -57,12 +57,12 @@ include("dbConnect.php");
         <center><img style="vertical-align: top; display: inline; height: 75px; width: 300px" src="Resources/Images/Robert_Gordon_University.png" alt="Logo"><br/></center>
         <br/>
         <?php
-        if ($profilePicturesResults = true) {
+        //if ($profilePicturesResults = true) {
             /*The following displays the users profile picture.
             To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
             was consulted.*/
             echo '<center>','<img src="data:image/jpeg;base64,' . base64_encode($profilePicturesResults['content']) . '" width="100" height="100"/>','</center>';
-        }
+        
         ?><br/>
         <h3>Public Profile</h3>
         <span>Student Name: </span><?php echo "<b>{$_SESSION["searchedStudentsName"]}</b>"?><br>
@@ -76,13 +76,13 @@ include("dbConnect.php");
         include "dbConnect.php";
         $sql = "SELECT * FROM userimages WHERE UserName = '".$username."'";
         $imagesResults = $link->query($sql);
-                if ($imagesResults = true){
+                //if ($imagesResults = true){
                  foreach( $imagesResults as $value ) {
-                 /*To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
-                 was consulted.*/
-                 echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
-                 echo '<br />';
-        }
+        /*To write the code for the following http://stackoverflow.com/questions/20556773/php-display-image-blob-from-mysql
+        was consulted.*/
+        echo '<img src="data:image/jpeg;base64,' . base64_encode($value['content']) . '" width="100" height="100"/>';
+        echo '<br />';
+
         }
         ?>
 
