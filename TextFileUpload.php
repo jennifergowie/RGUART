@@ -24,13 +24,9 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0 && $_FILES['file']
     include 'dbConnect.php';
 
     //The following updates the profile pictures table.
-    $sql = "UPDATE userfiles 
-        SET userName = '" . $userName . "', 
-        name = '" . $fileName . "', 
-        type =  '" . $fileType . "',
-        size = '" . $fileSize . "',
-        content = '" . $content . "'
-        WHERE UserName = '" . $_SESSION["username"] . "'";
+    $sql = "INSERT INTO userfiles (userName, name, size, type, content ) ".
+        "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content') WHERE UserName = '" . $_SESSION["username"] . "'";
+
     $result = $link->query($sql);
 
     //Loads the profile picture uploaded success page.
@@ -38,7 +34,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0 && $_FILES['file']
 
 }
 else {
-    header("location: TextConfirm.php");
+    header("location: UnableToLoad.php");
 
 }
 
