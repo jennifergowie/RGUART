@@ -12,21 +12,21 @@ if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
     $fileType = $_FILES['userfile']['type'];
 
     //The following opens and retrieves the file.
-    //$getTheFile = fopen($tmpName, 'r');
-    //$content = fread($getTheFile, filesize($tmpName));
-    //$content = addslashes($content);
-    //fclose($getTheFile);
+    $getTheFile = fopen($tmpName, 'r');
+    $content = fread($getTheFile, filesize($tmpName));
+    $content = addslashes($content);
+    fclose($getTheFile);
 
-$text;
-    $myfile = fopen($fileName, "r") or die("Unable to open file!");
+
+   // $myfile = fopen($fileName, "r") or die("Unable to open file!");
     // Output one line until end-of-file
-        while(!feof($myfile)) {
-         $content = $content + fgets($myfile) . "<br>";
-}
-    fclose($myfile);
-//if (!get_magic_quotes_gpc()) {
-      //  $fileName = addslashes($fileName);
-    //}
+     //   while(!feof($myfile)) {
+       //  $content = $content + fgets($myfile) . "<br>";
+
+   // fclose($myfile);
+if (!get_magic_quotes_gpc()) {
+      $fileName = addslashes($fileName);
+    }
 
     include 'dbConnect.php';
 
@@ -35,7 +35,7 @@ $text;
             "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')" ;
             $result = $link->query($sql);
 
-    //Loads the profile picture uploaded success page.
+    //Loads the text confirm uploaded success page.
     header("location: TextConfirm.php");
 
 }
