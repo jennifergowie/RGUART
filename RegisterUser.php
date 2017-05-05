@@ -23,9 +23,9 @@ include("dbConnect.php");    //Establish database connection
     $sql_three = "INSERT INTO profilepictures (userName) VALUES ('".$username."')";
     $link->query($sql_three);
 
-    //echo $username;
-    //echo $emailAddress;
-    //echo $password;
-    //echo $mobileNumber;
+    echo $username;
+    echo $emailAddress;
+    echo $password;
+    echo $mobileNumber;
 
 header("location: RegisterSuccess.php");
