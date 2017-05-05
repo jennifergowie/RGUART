@@ -12,20 +12,27 @@ if(isset($_POST['upload']) && ($_FILES['userfile']['size'] >0 )) {
     $fileType = $_FILES['userfile']['type'];
 
     //The following opens and retrieves the file.
-    $getTheFile = fopen($tmpName, 'r');
-    $content = fread($getTheFile, filesize($tmpName));
-    $content = addslashes($content);
-    fclose($getTheFile);
+    //$getTheFile = fopen($tmpName, 'r');
+    //$content = fread($getTheFile, filesize($tmpName));
+    //$content = addslashes($content);
+    //fclose($getTheFile);
 
-    if (!get_magic_quotes_gpc()) {
-        $fileName = addslashes($fileName);
-    }
+    $myfile = fopen($fileName, "r") or die("Unable to open file!");
+    $content = fgets($myfile);
+    fclose($myfile);
+    //if (!get_magic_quotes_gpc()) {
+      //  $fileName = addslashes($fileName);
+    //}
 
     include 'dbConnect.php';
 
     //The following updates the profile pictures table.
     $sql = "INSERT INTO userfiles (userName, name, size, type, content ) ".
         "VALUES ('$userName','$fileName', '$fileSize', '$fileType', '$content')" ;
+
+
+
+
 
     $result = $link->query($sql);
 
